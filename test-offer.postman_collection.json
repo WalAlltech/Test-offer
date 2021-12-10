@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "d8d6de9b-c4a6-45f2-9b7e-cd57a57c98dd",
+		"name": "test-offer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create minimal user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"test\",\r\n    \"birthDate\": \"2003-09-06\",\r\n    \"country\": \"france\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/testoffer/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"testoffer",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create full user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"test\",\r\n    \"birthDate\": \"2003-09-06\",\r\n    \"country\": \"france\",\r\n    \"phoneNumber\": \"0123456789\",\r\n    \"gender\": \"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/testoffer/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"testoffer",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one register user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/testoffer/users/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"testoffer",
+						"users",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user - must be an adult",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"test3\",\r\n    \"birthDate\": \"2015-09-06\",\r\n    \"country\": \"france\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/testoffer/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"testoffer",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user - must be french",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"test\",\r\n    \"birthDate\": \"2000-09-06\",\r\n    \"country\": \"England\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
