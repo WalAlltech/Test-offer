@@ -3,7 +3,7 @@ Test-offer for AF
 
 # Requirements
 
-- Maven 34.0.0
+- Maven 4.0.0
 - An IDE 
 - Postman
 
